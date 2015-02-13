@@ -111,6 +111,9 @@ body {
                 }
 
                 a {
+                    font-family: 'Cinzel';
+                    font-weight: bold;
+                    color: $dark-blue;
                     text-decoration: none;
                 }
             }
@@ -128,7 +131,7 @@ body {
             }
 
             .description {
-                font-size: 0.6em;
+                font-size: 0.8em;
                 padding: 1em 0em 0px;
             }
         }
