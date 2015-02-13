@@ -1,0 +1,19 @@
+{
+  "name": "hugo-theme-artem",
+  "version": "0.0.1",
+  "description": "Task runner for hugo-theme-artem Hugo theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hugo",
+    "theme"
+  ],
+  "author": "Arthur Vincent Simon",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.8.11",
+    "gulp-sass": "~1.3.3"
+  }
+}

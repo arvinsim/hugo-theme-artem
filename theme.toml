@@ -1,0 +1,6 @@
+author = "Arthur Vincent Simon"
+description = "A theme for my blog, Artem"
+license = "MIT"
+name = "Artem Hugo Theme"
+source_repo = "https://github.com/arvinsim/hugo-theme-artem.git"
+tags = ["art", "blog", "artem"]

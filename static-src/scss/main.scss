@@ -1,0 +1,172 @@
+/* Colors */
+$dark-green: #034009;
+$dark-blue: #031B40;
+$gold: #E5BF16;
+$light-gray: #DBDBDB;
+$black: #000000;
+$purple: #40031B;
+
+/* Yahoo Pure CSS Overrides */
+.button-small {
+    font-size: 0.75em;
+}
+
+/* Main */
+* {
+    box-sizing: border-box;
+}
+
+html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: $light-gray;
+    color: $dark-blue;
+
+    pre {
+        margin: 2em 0px;
+
+        code {
+            font-family: monospace;
+            color: $light-gray;
+            background-color: $dark-green;
+            box-sizing: padding-box;
+            padding: 2em 2em;
+            border-radius: 3px; 
+        }
+    }
+}
+
+.sidebar {
+    background-color: $dark-blue;
+    color: $light-gray;
+
+    .header {
+        text-align: right;
+
+        .site-logo {
+            font-size: 2em;
+        }
+
+        .site-title a {
+            font-family: 'Cinzel', 'Ubuntu', sans-serif;
+            font-size: 2em;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .site-subtitle {
+        }
+    }
+}
+
+.main-content {
+    p { 
+        text-align: justify;
+    }
+
+    .post {
+        h1 {
+            font-family: 'Cinzel';
+            font-size: 3em;
+            margin: 0px; 
+
+            a {
+                text-decoration: none;
+                color: $dark-green;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            /*color: @dark-green;*/
+            color: $purple;
+        }
+
+        .post-date {
+            font-style: italic;
+        }
+
+        .tags {
+            display: inline;
+            list-style-type: none;
+
+            li {
+                display: inline;
+            }
+        }
+    }
+
+    &.homepage, &.taxonomy {
+        .post {
+            padding: 2em 0em 0px;
+
+            .title {
+                text-decoration: none;
+                font-size: 1.5em;
+
+                .select-indicator {
+                    visibility: hidden;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            .title:hover .select-indicator {
+                visibility: visible;
+            }
+
+            .post-date {
+                font-size: 0.6em;
+            }
+            
+            .tag {
+                font-size: 0.6em;
+            }
+
+            .description {
+                font-size: 0.6em;
+                padding: 1em 0em 0px;
+            }
+        }
+    }
+
+    &.single {
+       .post {
+           .post-date {
+               font-size: 0.75em;
+            }
+
+            .tags {
+               font-size: 0.75em;
+            }
+
+           .content {
+               margin-top: 2em;
+            }
+        }
+    }
+} 
+
+
+
+/* Media queries */
+@media (min-width: 48em) { 
+    .main-content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .sidebar {
+        .header {
+            margin: 10% 2em 0;
+        }
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+}
