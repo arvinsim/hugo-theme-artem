@@ -9,20 +9,11 @@ html, button, input, select, textarea {
 }
 
 body {
-    background-color: $light-gray;
-    color: $dark-blue;
-
-    pre {
-        margin: 2em 0px;
-
-        code {
-            font-family: $fixed-font-family;
-            color: $light-gray;
-            background-color: $dark-green;
-            box-sizing: padding-box;
-            padding: 2em 2em;
-            border-radius: 3px; 
-        }
-    }
+    background-color: $alice-blue;
+    color: $blue-bark;
 }
 
+a {
+    color: $tahiti-gold;
+    text-decoration: none;
+}

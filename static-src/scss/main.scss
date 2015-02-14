@@ -3,11 +3,10 @@
 
 .sidebar {
     background-color: $dark-blue;
-    color: $light-gray;
+    color: $alice-blue;
+    text-align: right;
 
     .header {
-        text-align: right;
-
         .site-logo {
             font-size: 2em
         }
@@ -15,13 +14,26 @@
         .site-title a {
             font-family: 'Cinzel', 'Ubuntu', sans-serif;
             font-size: 2em;
-            text-decoration: none;
-            color: inherit;
         }
+    }
+
+    .menu {
+        text-align: left;
+
+        ul li {
+            list-style-type: none;
+        }
+    }
+
+    footer {
     }
 }
 
 .main-content {
+    a {
+        color: darken($tahiti-gold, 30%);
+    }
+
     p {
         text-align: justify;
     }
@@ -30,16 +42,6 @@
         h1 {
             font-family: 'Cinzel';
             font-size: 3em;
-
-            a {
-                text-decoration: none;
-                color: $dark-green;
-            }
-        }
-
-        a {
-            text-decoration: none;
-            color: $purple;
         }
 
         .post-date {
@@ -71,8 +73,7 @@
                 a {
                     font-family: 'Cinzel';
                     font-weight: bold;
-                    color: $dark-blue;
-                    text-decoration: none;
+                    color: $blue-bark;
                 }
             }
 
@@ -122,7 +123,7 @@
     }
 
     .sidebar {
-        .header {
+        > * {
             margin: 10% 2em 0;
         }
 
