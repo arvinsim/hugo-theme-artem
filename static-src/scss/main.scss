@@ -1,42 +1,5 @@
-/* Colors */
-$dark-green: #034009;
-$dark-blue: #031B40;
-$gold: #E5BF16;
-$light-gray: #DBDBDB;
-$black: #000000;
-$purple: #40031B;
-
-/* Yahoo Pure CSS Overrides */
-.button-small {
-    font-size: 0.75em;
-}
-
-/* Main */
-* {
-    box-sizing: border-box;
-}
-
-html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
-    font-family: 'Ubuntu', sans-serif;
-}
-
-body {
-    background-color: $light-gray;
-    color: $dark-blue;
-
-    pre {
-        margin: 2em 0px;
-
-        code {
-            font-family: monospace;
-            color: $light-gray;
-            background-color: $dark-green;
-            box-sizing: padding-box;
-            padding: 2em 2em;
-            border-radius: 3px; 
-        }
-    }
-}
+@import "partials/base";
+@import "vendor/pure";
 
 .sidebar {
     background-color: $dark-blue;
@@ -46,7 +9,7 @@ body {
         text-align: right;
 
         .site-logo {
-            font-size: 2em;
+            font-size: 2em
         }
 
         .site-title a {
@@ -55,14 +18,11 @@ body {
             text-decoration: none;
             color: inherit;
         }
-
-        .site-subtitle {
-        }
     }
 }
 
 .main-content {
-    p { 
+    p {
         text-align: justify;
     }
 
@@ -70,7 +30,6 @@ body {
         h1 {
             font-family: 'Cinzel';
             font-size: 3em;
-            margin: 0px; 
 
             a {
                 text-decoration: none;
@@ -80,7 +39,6 @@ body {
 
         a {
             text-decoration: none;
-            /*color: @dark-green;*/
             color: $purple;
         }
 
