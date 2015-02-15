@@ -13,7 +13,7 @@
 
         .site-title a {
             font-family: 'Cinzel', 'Ubuntu', sans-serif;
-            font-size: 2em;
+            font-size: 1em;
         }
 
         .site-description {
@@ -127,8 +127,13 @@
     }
 
     .sidebar {
-        > * {
+        > .container {
             margin: 10% 2em 0;
+            line-height: 1em;
+
+            > .header, > .contact, > footer {
+                margin: 3em 0;
+            }
         }
 
         position: fixed;
