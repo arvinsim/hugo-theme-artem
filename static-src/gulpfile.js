@@ -1,12 +1,18 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var path = require('path');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function() {
     gulp.src('./scss/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass({
-            paths: [ path.join(__dirname, 'sass', 'includes') ]
+            includePaths: [
+                __dirname,
+                'sass',
+                'node_modules/susy/sass'
+            ]
         }))
+        .pipe(sourcemaps.write('../static/css'))
         .pipe(gulp.dest('../static/css'))
 });
 
