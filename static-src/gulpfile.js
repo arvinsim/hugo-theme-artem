@@ -7,9 +7,9 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: [
+                './node_modules/susy/sass',
                 __dirname,
-                'sass',
-                'node_modules/susy/sass'
+                './sass'
             ]
         }))
         .pipe(sourcemaps.write('../static/css'))
