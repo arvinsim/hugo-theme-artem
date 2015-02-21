@@ -8,8 +8,8 @@
         <div class="main-content single">
             <article class="article-item">
                 <div class="header">
-                    <h1 class="title">{{ .Title }}</h1>
                     <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+                    <h1 class="title">{{ .Title }}</h1>
                     {{ range .Params.tags }}
                     <a class="tag"href="{{ $baseurl }}/tags/{{ . | urlize }}" class="button-small pure-button">{{ . }}</a>
                     {{ end }}

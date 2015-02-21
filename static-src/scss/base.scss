@@ -1,5 +1,5 @@
 $base-color: hsla(216, 91%, 13%, 1);
-$complement-color: saturate(complement($base-color), 50%);
+$complement-color: hsla(42, 100%, 55%, 1);
 
 $base-font-family: 'Open Sans', sans-serif;
 $fixed-font-family: monospace, sans-serif;
@@ -17,8 +17,11 @@ body {
 }
 
 a {
-    color: $complement-color;
     text-decoration: none;
+}
+
+img {
+    width: 100%;
 }
 
 body { 
