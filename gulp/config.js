@@ -7,7 +7,8 @@ module.exports = {
         dest: dest + '/css/',
         settings: {
             includePaths: [
-                './node_modules/susy/sass',
+                './node_modules/modularized-normalize-scss/',
+                './node_modules/susy/sass'
             ]
         },
         watchlist: [

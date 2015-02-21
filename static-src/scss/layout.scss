@@ -1,0 +1,7 @@
+.main-content {
+    @include span(3 of 4);
+}
+
+.info-sidebar {
+    @include span(1 of 4 last);
+} 

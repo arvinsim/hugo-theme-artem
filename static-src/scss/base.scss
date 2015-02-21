@@ -1,0 +1,26 @@
+$base-color: hsla(216, 91%, 13%, 1);
+$complement-color: saturate(complement($base-color), 50%);
+
+$base-font-family: 'Open Sans', sans-serif;
+$fixed-font-family: monospace, sans-serif;
+
+@include global-box-sizing(border-box);
+
+html, button, input, select, textarea {
+    font-family: $base-font-family;
+    font-size: 16px;
+}
+
+body {
+    color: $base-color; 
+    margin-top: 6em;
+}
+
+a {
+    color: $complement-color;
+    text-decoration: none;
+}
+
+body { 
+    @include container(60em); 
+}

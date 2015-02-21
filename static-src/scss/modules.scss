@@ -1,0 +1,98 @@
+.site-details {
+    text-align: left;
+
+    .title {
+        margin: 0;
+
+        a {
+            color: lighten($complement-color, 50%);
+            font-size: 2em;
+        }
+    }
+}
+
+/* A list of articles items */
+.article-list-item {
+   margin: 2em;
+
+   .title { 
+        font-size: 2em;
+
+        a {
+            color: $base-color;
+            font-weight: bold;
+        }
+
+        .select-indicator {
+           visibility: hidden;
+        }
+
+        &:hover .select-indicator {
+            visibility: visible;
+        }
+    }
+
+    .date {
+        font-size: 0.75em;
+    }
+
+    .tags {
+        background-color: lighten($complement-color, 50%);
+        font-size: 0.75em;
+        padding: 0.2em;
+    }
+    
+    .description {
+        font-size: 1em;
+    }
+}
+
+/* A single article in its entirety */
+.article-item {
+    .header {
+        margin-bottom: 3em;
+
+        .title {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .date {
+            font-size: 0.75em;
+        }
+
+        .tag {
+            background-color: lighten($complement-color, 50%);
+        }
+    }
+
+    .content {
+        h2 {
+            font-size: 1.25em;
+        }
+
+        h3 {
+            font-size: 1.20em;
+        }
+
+        h4 {
+            font-size: 1.15em;
+        }
+
+        h5 {
+            font-size: 1.10em;
+        }
+
+        h6 {
+            font-size: 1.05em;
+        }
+
+        p { 
+            font-size: 0.9em;
+        }
+
+        ul li.no-style {
+            list-style-type: none;
+        }
+    }
+} 

@@ -1,14 +1,9 @@
-<div class="container">
-    <div class="header">
-        <div class="site-logo">＿〆(。。)</div>
-        <h1 class="title"><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a></h1>
-        <h2 class="site-description">{{ .Site.Params.description }}</h2>
-    </div>
-    <div class="contact">
-        <div>email: developarvin+artem@gmail.com</div>
-        <div>twitter: <a href="https://twitter.com/Arvinsim">@Arvinsim</a></div>
-    </div>
-    <div>
-        {{ partial "footer.html" . }}
-    </div>
-</div>
+<section class="site-details">
+    <h1 class="title"><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a></h1>
+    <h2 class="description">{{ .Site.Params.description }}</h2>
+</section>
+<section class="contacts">
+    <div class="email">email: developarvin+artem@gmail.com</div>
+    <div class="twitter">twitter: <a href="https://twitter.com/Arvinsim">@Arvinsim</a></div>
+</section>
+{{ partial "footer.html" . }}

@@ -6,20 +6,18 @@
     </head>
     <body>
         <div class="main-content single">
-            <section class="post">
-                <h1>{{ .Title }}</h1>
-                <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
-                <ul class="tags">
+            <article class="article-item">
+                <div class="header">
+                    <h1 class="title">{{ .Title }}</h1>
+                    <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
                     {{ range .Params.tags }}
-                    <li>
-                    <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="button-small pure-button">{{ . }}</a>
-                    </li>
+                    <a class="tag"href="{{ $baseurl }}/tags/{{ . | urlize }}" class="button-small pure-button">{{ . }}</a>
                     {{ end }}
-                </ul>
+                </div>
                 <div class="content">
                 {{ .Content }}
                 </div>
-            </section>
+            </article>
         </div>
         <div class="info-sidebar">
             {{ partial "info-sidebar.html" . }}
