@@ -1,0 +1,13 @@
+body { @include container; }
+
+.info-sidebar {
+    @include span(1 of 4);
+}
+
+.main-content {
+    @include span(2 of 4);
+}
+
+.menu-sidebar {
+    @include span(1 of 4);
+}
