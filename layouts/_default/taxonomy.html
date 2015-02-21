@@ -6,8 +6,8 @@
     </head>
     <body class="{{if .Site.Params.themeColor}}{{.Site.Params.themeColor}}{{else}}theme-dark-green{{end}}">
         <div class="pure-g">
-            <div class="sidebar pure-u-1 pure-u-md-1-4">
-                {{ partial "sidebar.html" . }}
+            <div class="left-sidebar pure-u-1 pure-u-md-1-4">
+                {{ partial "left-sidebar.html" . }}
             </div>
             <div class="main-content taxonomy pure-u-1 pure-u-md-3-4">
                 <div>Tag: {{ .Title }}</div>
