@@ -14,7 +14,7 @@
                 </div>
                 <time class="post-date">{{ .Date.Format "January 2, 2006" }}</time>
                 {{ range .Params.tags }}
-                <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>
+                <a class="tags" href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>
                 {{ end }}
                 <div class="description">
                     {{ .Description }}

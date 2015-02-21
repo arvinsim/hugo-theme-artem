@@ -1,13 +1,9 @@
 @import "susy"; 
 
 /* Colors */
-$dark-blue: hsl(216, 91%, 13%);
-$light-sky-blue: hsl(203, 98%, 78%);
-$alice-blue: hsl(202, 100%, 96%);
-$tahiti-gold: hsl(23, 99%, 64%);
-$blue-bark: hsl(202, 100%, 5%);
-
-$base-color: hsla(216, 95%, 25%, 1);
+/*$base-color: hsla(216, 95%, 25%, 1);*/
+$base-color: hsla(216, 91%, 13%, 1);
+$complement-color: saturate(complement($base-color), 50%);
 
 $base-font-family: 'Open Sans', sans-serif;
 $fixed-font-family: monospace, sans-serif;
@@ -16,18 +12,19 @@ $fixed-font-family: monospace, sans-serif;
     box-sizing: border-box;
 }
 
+@include global-box-sizing(border-box);
+
 html, button, input, select, textarea {
     font-family: $base-font-family;
     font-size: 16px;
 }
 
 body {
-    background-color: white;
     color: $base-color; 
 }
 
 a {
-    color: complement($base-color);
+    color: $complement-color;
     text-decoration: none;
 }
 
@@ -37,163 +34,59 @@ body {
 
 .main-content {
     @include span(3 of 4);
+    font-size: 0.9em;
+
+    h2 {
+        font-size: 1.15em;
+    }
+
+    &.homepage {
+       .post {
+           margin: 2em;
+
+           .title { 
+                font-size: 2em;
+
+                a {
+                    color: $base-color;
+                    font-weight: bold;
+                }
+
+                .select-indicator {
+                   visibility: hidden;
+                }
+
+                &:hover .select-indicator {
+                    visibility: visible;
+                }
+            }
+
+            .post-date {
+                font-size: 0.75em;
+            }
+
+            .tags {
+                font-size: 0.75em;
+                background-color: lighten($complement-color, 50%);
+                padding: 0.2em;
+            }
+            
+            .description {
+                font-size: 1em;
+            }
+        }
+    }
 }
 
 .info-sidebar {
     @include span(1 of 4 last);
+    text-align: left;
+
+    .header {
+        .title {
+            font-size: 3em;
+        }
+    }
 }
 
 
-/*.left-sidebar {*/
-    /*background-color: $dark-blue;*/
-    /*color: $alice-blue;*/
-    /*text-align: right;*/
-
-    /*.header {*/
-        /*.site-logo {*/
-            /*font-size: 2em*/
-        /*}*/
-
-        /*.site-title a {*/
-            /*font-family: 'Cinzel', 'Ubuntu', sans-serif;*/
-            /*font-size: 1em;*/
-        /*}*/
-
-        /*.site-description {*/
-            /*font-family: 'Cinzel', 'Ubuntu', sans-serif;*/
-        /*}*/
-    /*}*/
-
-    /*.menu {*/
-        /*text-align: left;*/
-
-        /*ul li {*/
-            /*list-style-type: none;*/
-        /*}*/
-    /*}*/
-
-    /*footer {*/
-    /*}*/
-/*}*/
-
-/*.main-content {*/
-    /*a {*/
-        /*color: darken($tahiti-gold, 30%);*/
-    /*}*/
-
-    /*p {*/
-        /*text-align: justify;*/
-    /*}*/
-
-    /*.post {*/
-        /*h1 {*/
-            /*font-family: 'Cinzel';*/
-            /*font-size: 3em;*/
-        /*}*/
-
-        /*.post-date {*/
-            /*font-style: italic;*/
-        /*}*/
-
-        /*.tags {*/
-            /*display: inline;*/
-            /*list-style-type: none;*/
-
-            /*li {*/
-                /*display: inline;*/
-            /*}*/
-        /*}*/
-    /*}*/
-
-    /*&.homepage, &.taxonomy {*/
-        /*.post {*/
-            /*padding: 2em 0em 0px;*/
-
-            /*.title {*/
-                /*text-decoration: none;*/
-                /*font-size: 1.5em;*/
-
-                /*.select-indicator {*/
-                    /*visibility: hidden;*/
-                /*}*/
-
-                /*a {*/
-                    /*font-family: 'Cinzel';*/
-                    /*font-weight: bold;*/
-                    /*color: $blue-bark;*/
-                /*}*/
-            /*}*/
-
-            /*.title:hover .select-indicator {*/
-                /*visibility: visible;*/
-            /*}*/
-
-            /*.post-date {*/
-                /*font-size: 0.6em;*/
-            /*}*/
-            
-            /*.tag {*/
-                /*font-size: 0.6em;*/
-            /*}*/
-
-            /*.description {*/
-                /*font-size: 0.8em;*/
-                /*padding: 1em 0em 0px;*/
-            /*}*/
-        /*}*/
-    /*}*/
-
-    /*&.single {*/
-       /*.post {*/
-           /*.post-date {*/
-               /*font-size: 0.75em;*/
-            /*}*/
-
-            /*.tags {*/
-               /*font-size: 0.75em;*/
-            /*}*/
-
-           /*.content {*/
-               /*margin-top: 2em;*/
-            /*}*/
-        /*}*/
-    /*}*/
-/*} */
-
-/*.right-sidebar {*/
-     /*background-color: $dark-blue;*/
-    /*color: $alice-blue;*/
-    /*text-align: right;*/
-/*}*/
-
-
-
-/*[> Media queries <]*/
-/*@media (min-width: 48em) { */
-    /*.main-content {*/
-        /*padding: 2em 3em 0;*/
-        /*margin-left: 25%;*/
-    /*}*/
-
-    /*.left-sidebar {*/
-        /*> .container {*/
-            /*margin: 10% 2em 0;*/
-            /*line-height: 1.4em;*/
-
-            /*> .header, > .contact, > footer {*/
-                /*margin: 3em 0;*/
-            /*}*/
-        /*}*/
-
-        /*[>position: fixed;<]*/
-        /*[>top: 0;<]*/
-        /*[>bottom: 0;<]*/
-    /*}*/
-
-    /*.right-sidebar {*/
-        /*[>position: fixed;<]*/
-        /*[>top: 0;<]*/
-        /*[>bottom: 0;<]*/
-        /*[>right: 0;<]*/
-    /*}*/
-/*}*/
