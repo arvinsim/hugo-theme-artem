@@ -5,9 +5,6 @@
         {{ partial "head.html" . }}
     </head>
     <body>
-        <div class="info-sidebar">
-            {{ partial "left-sidebar.html" . }}
-        </div>
         <div class="main-content homepage">
             {{ range .Data.Pages }}
             <section class="post">
@@ -24,8 +21,9 @@
                 </div>
             </section>
             {{ end }}
-            <div class="menu-sidebar">
-            </div>
+        </div>
+        <div class="info-sidebar">
+            {{ partial "info-sidebar.html" . }}
         </div>
     </body>
 </html>

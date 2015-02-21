@@ -6,9 +6,6 @@
     </head>
     <body>
         <div class="pure-g">
-            <div class="left-sidebar pure-u-1-4 pure-u-md-1-4">
-                {{ partial "left-sidebar.html" . }}
-            </div>
             <div class="main-content single pure-u-2-4 pure-u-md-2-4">
                 <section class="post">
                     <h1>{{ .Title }}</h1>
@@ -26,6 +23,9 @@
                 </section>
             </div>
             <div class="right-sidebar pure-u-1-4 pure-u-md-1-4">sdfasdf</div>
+        </div>
+        <div class="info-sidebar pure-u-1 pure-u-md-1-4">
+            {{ partial "info-sidebar.html" . }}
         </div>
     </body>
 </html>
