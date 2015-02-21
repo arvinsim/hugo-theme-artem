@@ -1,6 +1,48 @@
-@import "vendor/vendor_susy";
-@import "partials/base";
-@import "partials/layouts";
+@import "susy"; 
+
+/* Colors */
+$dark-blue: hsl(216, 91%, 13%);
+$light-sky-blue: hsl(203, 98%, 78%);
+$alice-blue: hsl(202, 100%, 96%);
+$tahiti-gold: hsl(23, 99%, 64%);
+$blue-bark: hsl(202, 100%, 5%);
+
+$base-color: hsla(216, 95%, 25%, 1);
+
+$base-font-family: 'Open Sans', sans-serif;
+$fixed-font-family: monospace, sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+
+html, button, input, select, textarea {
+    font-family: $base-font-family;
+    font-size: 16px;
+}
+
+body {
+    background-color: white;
+    color: $base-color; 
+}
+
+a {
+    color: complement($base-color);
+    text-decoration: none;
+}
+
+body { 
+    @include container(60em); 
+}
+
+.main-content {
+    @include span(3 of 4);
+}
+
+.info-sidebar {
+    @include span(1 of 4 last);
+}
+
 
 /*.left-sidebar {*/
     /*background-color: $dark-blue;*/
