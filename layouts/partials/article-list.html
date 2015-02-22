@@ -1,0 +1,16 @@
+{{ $baseurl := .Site.BaseUrl }}
+{{ range .Data.Pages }}
+<section class="article-list-item">
+    <div class="title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="select-indicator">&Delta;</span>
+    </div>
+    <time class="date">{{ .Date.Format "January 2, 2006" }}</time>
+    {{ range .Params.tags }}
+    <a class="tags" href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+    <div class="description">
+        {{ .Description }}
+    </div>
+</section>
+{{ end }}
