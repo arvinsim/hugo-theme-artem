@@ -6,23 +6,8 @@
     </head>
     <body>
         <div class="main-content taxonomy">
-            <div>Tag: {{ .Title }}</div>
-
-            {{ range .Data.Pages }}
-            <section class="post">
-                <div class="title">
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    <span class="select-indicator">&Delta;</span>
-                </div>
-                <time class="post-date">{{ .Date.Format "January 2, 2006" }}</time>
-                {{ range .Params.tags }}
-                <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="button-small pure-button tag">{{ . }}</a>
-                {{ end }}
-                <div class="description">
-                    {{ .Description }}
-                </div>
-            </section>
-            {{ end }}
+            <h1>Tag: {{ .Title }}</h1>
+            {{ partial "article-list.html" . }} 
         </div>
         <div class="info-sidebar">
             {{ partial "info-sidebar.html" . }}
