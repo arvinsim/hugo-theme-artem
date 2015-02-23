@@ -11,5 +11,9 @@
     @include span(2 of 6 last);
     @media (max-width: 768px) {
         @include span(1 of 1 first);
+
+        .title, .description, section {
+            text-align: center;
+        }
     }
 } 

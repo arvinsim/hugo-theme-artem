@@ -1,8 +1,16 @@
 <section class="site-details">
     <h1 class="title"><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a></h1>
     <h2 class="description">{{ .Site.Params.description }}</h2>
+    <hr/>
+</section>
+<section>
+    <h3>Disciplines</h3>
+    {{ range $name, $taxonomy := .Site.Taxonomies.disciplines }}
+    <a class='discipline' href="/disciplines/{{ $name | urlize }}">{{ $name }}</a>
+    {{ end }}
 </section>
 <section class="contacts">
+    <h3>Contacts</h3>
     <div class="email">email: developarvin+artem@gmail.com</div>
     <div class="twitter">twitter: <a href="https://twitter.com/Arvinsim">@Arvinsim</a></div>
 </section>

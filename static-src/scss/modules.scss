@@ -1,5 +1,5 @@
 @mixin tag {
-    background-color: $complement-color;
+    background-color: lighten($complement-color, 10%);
     color: $base-color;
     font-size: 0.75em;
     padding: 0.3em;
@@ -12,25 +12,22 @@
 
 .info-sidebar {
     section {
-        margin-bottom: 3em;
+        margin-bottom: 4em;
+    }
+
+    .discipline {
+        @include tag;
     }
 
     .site-details {
         text-align: left;
 
-        section {
-        }
-
         .title {
             a {
-                color: $complement-color;
+                color: darken($complement-color, 10%);
                 font-size: 2.5em;
                 line-height: 1em;
             }
-        }
-
-        .description {
-            font-size: 1em;
         }
     }
 }
