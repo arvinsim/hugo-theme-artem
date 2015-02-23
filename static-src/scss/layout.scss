@@ -1,7 +1,13 @@
 .main-content {
     @include span(4 of 6);
+    @media (max-width: 768px) {
+        @include span(1 of 1 last);
+    }
 }
 
 .info-sidebar {
     @include span(2 of 6 last);
+    @media (max-width: 768px) {
+        @include span(1 of 1 last);
+    }
 } 
