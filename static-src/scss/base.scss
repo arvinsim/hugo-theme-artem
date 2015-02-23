@@ -1,6 +1,7 @@
 $base-color: hsla(216, 91%, 13%, 1);
 $complement-color: hsla(42, 100%, 55%, 1);
 
+$base-font-size: 1em;
 $base-font-family: 'Open Sans', sans-serif;
 $fixed-font-family: monospace, sans-serif;
 
@@ -8,7 +9,7 @@ $fixed-font-family: monospace, sans-serif;
 
 html, button, input, select, textarea {
     font-family: $base-font-family;
-    font-size: 16px;
+    font-size: $base-font-size;
 }
 
 body {
