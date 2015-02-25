@@ -1,33 +1,52 @@
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,700italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Gentium+Book+Basic|Cinzel+Decorative:700);
 
-$base-color: hsla(216, 91%, 13%, 1);
-$complement-color: hsla(42, 100%, 55%, 1);
 
-$base-font-size: 1em;
-/*$base-font-family: 'Open Sans', sans-serif;*/
-$base-font-family: 'Lora', serif;
-$fixed-font-family: monospace, sans-serif;
+$primary-color: hsla(216, 91%, 13%, 1);
+$secondary-color: hsla(42, 100%, 55%, 1);
+/*$tertiary-color: hsla(156, 91%, 13%, 1);*/
+$tertiary-color: hsla(6, 91%, 13%, 1);
+
+$colors: (
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'tertiary': $tertiary-color
+);
+
+$base-font-size: (
+    'desktop': 18px,
+    'tablet': 16px,
+    'mobile': 16px
+);
+
+$site-title-font-family: 'Cinzel Decorative', serif;
+$headline-font-family: 'Gentium Book Basic', serif;
+$base-font-family: 'Open Sans', sans-serif;
 
 @include global-box-sizing(border-box);
 
 html, button, input, select, textarea {
     font-family: $base-font-family;
-    font-size: $base-font-size;
+    font-size: map-get($base-font-size, desktop);
+
+    @media (max-width: 768px) {
+        $font-size: map-get($base-font-size, mobile);
+    }
 }
 
 body {
-    color: $base-color; 
+    @include container(50em); 
+    color: map-get($colors, primary);
     margin-top: 6em;
 }
 
 a {
-    text-decoration: none;
+    color: map-get($colors, secondary);
 }
 
 img {
     width: 100%;
 }
 
-body { 
-    @include container(60em); 
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headline-font-family;
 }

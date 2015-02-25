@@ -6,9 +6,9 @@
     </div>
 
     <div class="info">
-        <div class="title">
+        <h1 class="title">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </div>
+        </h1>
         <time class="date">{{ .Date.Format "January 2, 2006" }}</time>
         {{ range .Params.tags }}
         <a class="tag" href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>
