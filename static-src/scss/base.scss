@@ -1,8 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,700italic,400italic);
+
 $base-color: hsla(216, 91%, 13%, 1);
 $complement-color: hsla(42, 100%, 55%, 1);
 
 $base-font-size: 1em;
-$base-font-family: 'Open Sans', sans-serif;
+/*$base-font-family: 'Open Sans', sans-serif;*/
+$base-font-family: 'Lora', serif;
 $fixed-font-family: monospace, sans-serif;
 
 @include global-box-sizing(border-box);
