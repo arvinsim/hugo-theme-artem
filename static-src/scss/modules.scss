@@ -43,10 +43,11 @@ header {
     }
 }
 
-.contact-details {
-    .contact a {
+.contact-details, .sections {
+    .contact, .section {
         color: lighten(map-get($colors, primary), 20%);
         text-decoration: none;
+        display: block;
     }
 }
 
@@ -100,7 +101,7 @@ header {
         }
 
         h2 {
-            margin: 3em 0 0 0;
+            margin: 2em 0 0 0;
         }
         
         p { 
@@ -116,10 +117,12 @@ header {
         img {
             border: 0.5em solid map-get($colors, secondary);
             border-radius: 1em;
+            margin: 1rem 0;
         }
     }
 } 
 
-main.taxonomy > h1 {
+.taxonomy > h1 {
     margin-bottom: 2em;
 }
+

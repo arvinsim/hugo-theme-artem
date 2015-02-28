@@ -3,15 +3,18 @@
     <h2 class="description">{{ .Site.Params.description }}</h2>
     <hr/>
 </section>
-<!--<section>-->
-    <!--<h3>Disciplines</h3>-->
+<section class="sections">
+    <h3>Disciplines</h3>
     <!--{{ range $name, $taxonomy := .Site.Taxonomies.disciplines }}-->
     <!--<a class='discipline' href="/disciplines/{{ $name | urlize }}">{{ $name }}</a>-->
     <!--{{ end }}-->
-<!--</section>-->
+    {{ range $name, $section := .Site.Sections }}
+    <a class="section" href="{{ $.Site.BaseUrl }}/{{ $name | urlize }}/">{{ $name }}</a>
+    {{ end }}
+</section>
 <section class="contact-details">
     <h3>Contacts</h3>
-    <div class="contact"><a href="mailto:developarvin+artem@gmail.com"><i class="fa fa-envelope-o"></i>Email</a></div>
-    <div class="contact"><a href="https://twitter.com/Arvinsim"><i class="fa fa-twitter"></i>Twitter</a></div>
+    <a class="contact" href="mailto:developarvin+artem@gmail.com"><i class="fa fa-envelope-o"></i>Email</a></div>
+    <a class="contact" href="https://twitter.com/Arvinsim"><i class="fa fa-twitter"></i>Twitter</a></div>
 </section>
 {{ partial "footer.html" . }}

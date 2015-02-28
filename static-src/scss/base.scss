@@ -12,7 +12,7 @@ $colors: (
 );
 
 $base-font-size: (
-    'desktop': 18px,
+    'desktop': 16px,
     'tablet': 16px,
     'mobile': 16px
 );
@@ -48,4 +48,8 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $headline-font-family;
+}
+
+p {
+    line-height: 1.4rem;
 }
