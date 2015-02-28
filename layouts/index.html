@@ -4,11 +4,11 @@
         {{ partial "head.html" . }}
     </head>
     <body>
-        <div class="main-content homepage">
-            {{ partial "article-list.html" . }} 
-        </div>
-        <div class="info-sidebar">
+        <main class="homepage">
+            {{ partial "post-list.html" . }} 
+        </main>
+        <header class="info-sidebar">
             {{ partial "info-sidebar.html" . }}
-        </div>
+        </header>
     </body>
 </html>

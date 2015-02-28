@@ -17,7 +17,7 @@
     font-size: 0.75em;
 }
 
-.info-sidebar {
+header {
     section {
         margin-bottom: 4em;
     }
@@ -50,48 +50,35 @@
     }
 }
 
-/* A list of articles items */
-.article-list-item {
+/* A list of post items */
+.post-list-item {
     @include container;
     margin-bottom: 3em;
     line-height: 2em;
 
-    .thumbnail {
-        @include span(1 of 12 first);
+    .title { 
+        margin: 0;
         font-size: 2em;
 
-        .select-indicator {
-           visibility: hidden;
-        }
-    }
+        a {
+            color: map-get($colors, primary);
+            text-decoration: none;
+            font-weight: bold;
 
-    &:hover .thumbnail .select-indicator {
-        visibility: visible;
-    }
-
-    .info {
-        @include span(11 of 12 last);
-
-        .title { 
-            margin: 0;
-            font-size: 2em;
-
-            a {
-                color: map-get($colors, primary);
-                text-decoration: none;
-                font-weight: bold;
+            &:hover {
+                text-decoration: underline;
             }
         }
+    }
 
 
-        .tag {
-            @include tag;
-        }
+    .tag {
+        @include tag;
     }
 }
 
-/* A single article in its entirety */
-.article-item {
+/* A single post in its entirety */
+.post-item {
     .header {
         margin-bottom: 3em;
 
@@ -107,6 +94,10 @@
 
     .content {
         $default-font-size: 1em;
+
+        a {
+            color: darken(map-get($colors, secondary), 30%);
+        }
 
         h2 {
             margin: 3em 0 0 0;
@@ -129,6 +120,6 @@
     }
 } 
 
-.main-content.taxonomy > h1 {
+main.taxonomy > h1 {
     margin-bottom: 2em;
 }

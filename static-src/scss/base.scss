@@ -35,7 +35,7 @@ html, button, input, select, textarea {
 body {
     @include container(55em); 
     color: map-get($colors, primary);
-    margin-top: 6em;
+    padding-top: 6em;
 }
 
 a {

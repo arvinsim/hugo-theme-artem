@@ -5,12 +5,12 @@
         {{ partial "head.html" . }}
     </head>
     <body>
-        <div class="main-content taxonomy">
+        <main class="taxonomy">
             <h1>Tag: {{ .Title }}</h1>
-            {{ partial "article-list.html" . }} 
-        </div>
-        <div class="info-sidebar">
+            {{ partial "post-list.html" . }} 
+        </main>
+        <header class="info-sidebar">
             {{ partial "info-sidebar.html" . }}
-        </div>
+        </header>
     </body>
 </html>
