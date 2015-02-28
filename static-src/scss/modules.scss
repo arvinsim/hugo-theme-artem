@@ -43,11 +43,17 @@ header {
     }
 }
 
-.contact-details, .sections {
-    .contact, .section {
+.contact-details {
+    .contact {
         color: lighten(map-get($colors, primary), 20%);
         text-decoration: none;
         display: block;
+    }
+}
+
+.sections {
+    .section {
+        @include tag;
     }
 }
 
@@ -122,7 +128,10 @@ header {
     }
 } 
 
-.taxonomy > h1 {
-    margin-bottom: 2em;
+main.taxonomy > h1 {
+    margin-bottom: 3rem;
 }
 
+main.section > h1 {
+    margin-bottom: 3rem;
+}
