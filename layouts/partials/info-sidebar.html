@@ -14,7 +14,7 @@
 </section>
 <section class="contact-details">
     <h3>Contacts</h3>
-    <a class="contact" href="mailto:developarvin+artem@gmail.com"><i class="fa fa-envelope-o"></i>Email</a></div>
-    <a class="contact" href="https://twitter.com/Arvinsim"><i class="fa fa-twitter"></i>Twitter</a></div>
+    <a class="contact" href="mailto:{{ .Site.Params.social.mail }}"><i class="fa fa-envelope-o"></i>Email</a></div>
+<a class="contact" href="{{ .Site.Params.social.twitter }}"><i class="fa fa-twitter"></i>Twitter</a></div>
 </section>
 {{ partial "footer.html" . }}
