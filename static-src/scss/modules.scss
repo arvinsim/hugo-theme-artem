@@ -30,15 +30,19 @@ header {
         text-align: left;
 
         .title {
-            font-family: $site-title-font-family;
             margin: 0;
 
             a {
                 text-decoration: none;
                 color: map-get($colors, primary);
-                font-size: 2em;
+                font-size: 3rem;
                 line-height: 1em;
             }
+        }
+
+        .description {
+            letter-spacing: 0.2rem;
+            font-size: 1rem;
         }
     }
 }
