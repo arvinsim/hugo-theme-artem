@@ -5,9 +5,6 @@
 </section>
 <section class="sections">
     <h3>Disciplines</h3>
-    <!--{{ range $name, $taxonomy := .Site.Taxonomies.disciplines }}-->
-    <!--<a class='discipline' href="/disciplines/{{ $name | urlize }}">{{ $name }}</a>-->
-    <!--{{ end }}-->
     {{ range $name, $section := .Site.Sections }}
     <a class="section" href="{{ $.Site.BaseUrl }}/{{ $name | urlize }}/">{{ $name }}</a>
     {{ end }}
