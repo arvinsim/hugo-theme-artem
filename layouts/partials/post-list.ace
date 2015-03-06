@@ -1,0 +1,10 @@
+{{ range .Data.Pages }}
+article.post-list-item
+  h1.title
+    a href="{{ .Permalink }}" {{ .Title }}
+  time.date {{ .Date.Format "January 2, 2006" }}
+  {{ range .Params.tags }}
+  a.tag href="{{ $.Site.BaseUrl }}/tags/{{ . | urlize }}" {{ . }}
+  {{ end }}
+  div.description {{ .Description }}
+{{ end }}

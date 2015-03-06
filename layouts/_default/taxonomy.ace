@@ -1,0 +1,9 @@
+= doctype html
+html lang="en-us"
+  head {{ partial "head" . }}
+  body
+    main.taxonomy
+      h1 Tag: {{.Title}}
+      {{ partial "post-list" . }}
+    header.info-sidebar
+      {{ partial "info-sidebar" . }}

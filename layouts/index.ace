@@ -1,0 +1,6 @@
+= doctype html
+html lang="en-us"
+  head {{ partial "head" . }}
+  body
+    main.homepage {{ partial "post-list" . }}
+    header.info-sidebar {{ partial "info-sidebar" . }}

@@ -1,0 +1,17 @@
+section.site-details
+  h1.title
+    a href="{{ .Site.BaseUrl }}" {{ .Site.Title }}
+  h2.description {{ .Site.Params.description }}
+  hr
+section.sections
+  h3 Disciplines
+    {{ range $name, $section := .Site.Sections }}
+    a.section href="{{ $.Site.BaseUrl }}/{{ $name | urlize }}/" {{ $name }}
+    {{ end }}
+section.contact-details
+  h3 Contacts
+  i.fa.fa-envelope-o
+  a.contact href="mailto:{{ .Site.Params.social.mail }}" Email
+  i.fa.fa-twitter
+  a.contact href="{{ .Site.Params.social.twitter }}" Twitter
+{{ partial "footer" . }}
