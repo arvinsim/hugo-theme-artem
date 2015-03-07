@@ -1,6 +1,6 @@
 article.post-item
   div.header
-    span.date {{ .Date.Format "Jauary 2, 2006" }}
+    span.date {{ .Date.Format "January 2, 2006" }}
     h1.title {{.Title}}
     {{ range .Params.tags }}
     a.tag href="{{ $.Site.BaseUrl }}/tags/{{ . | urlize }}" {{ . }}

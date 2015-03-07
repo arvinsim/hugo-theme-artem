@@ -4,7 +4,8 @@
     background-color: map-get($colors, secondary);
     text-decoration: none;
     font-size: 0.75em;
-    padding: 0.3em;
+    padding: 0.3rem;
+    margin: 0 0.1rem;
     
     &:hover {
         color: map-get($colors, secondary);
@@ -51,13 +52,13 @@ header {
     .contact {
         color: lighten(map-get($colors, primary), 20%);
         text-decoration: none;
-        display: block;
     }
 }
 
 .sections {
     .section {
         @include tag;
+        font-weight: bold;
     }
 }
 
