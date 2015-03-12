@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Gentium+Book+Basic|Cinzel+Decorative:700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic,300italic,300,900,900italic|Gentium+Book+Basic);
 
 
 $primary-color: hsla(216, 91%, 13%, 1);
@@ -15,9 +15,8 @@ $base-font-size: (
     'mobile': 16px
 );
 
-$site-title-font-family: 'Cinzel Decorative', serif;
 $headline-font-family: 'Gentium Book Basic', serif;
-$base-font-family: 'Lora', sans-serif;
+$base-font-family: 'Merriweather', sans-serif;
 
 @include global-box-sizing(border-box);
 
