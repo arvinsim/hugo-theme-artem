@@ -1,8 +1,8 @@
-article.post-item
+article.post-item itemscope= itemtype="https://schema.org/BlogPosting"
   div.header
-    span.date {{ .Date.Format "January 2, 2006" }}
-    h1.title {{.Title}}
+    span.date itemprop="datePublished" {{ .Date.Format "January 2, 2006" }}
+    h1.title itemprop="name" {{.Title}}
     {{ range .Params.tags }}
     a.tag href="{{ $.Site.BaseUrl }}/tags/{{ . | urlize }}" {{ . }}
     {{ end }}
-  div.content {{ .Content }}
+  div.content itemprop="text" {{ .Content }}

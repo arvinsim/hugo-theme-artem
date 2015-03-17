@@ -1,10 +1,10 @@
 {{ range .Data.Pages }}
-article.post-list-item
+article.post-list-item itemscope= itemtype="https://schema.org/BlogPosting"
   h1.title
-    a href="{{ .Permalink }}" {{ .Title }}
-  time.date {{ .Date.Format "January 2, 2006" }}
+    a href="{{ .Permalink }}" itemprop="name" {{ .Title }}
+  time.date itemprop="datePublished" {{ .Date.Format "January 2, 2006" }}
   {{ range .Params.tags }}
   a.tag href="{{ $.Site.BaseUrl }}/tags/{{ . | urlize }}" {{ . }}
   {{ end }}
-  div.description {{ .Description }}
+  div.description itemprop="about" {{ .Description }}
 {{ end }}
