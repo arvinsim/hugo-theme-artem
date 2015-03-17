@@ -16,4 +16,7 @@ section.contact-details
   div
     i.fa.fa-twitter
     a.contact href="{{ .Site.Params.social.twitter }}" Twitter
+  div
+    i.fa.fa-rss
+    a.contact href="{{ .RSSLink }}" RSS
 {{ partial "footer" . }}
