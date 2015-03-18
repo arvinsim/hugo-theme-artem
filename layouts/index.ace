@@ -1,6 +1,6 @@
 = doctype html
 html lang="en-us" prefix="og: http://ogp.me/ns#"
-head {{ partial "head" . }}
+  head {{ partial "head" . }}
   body
     main.homepage {{ partial "post-list" . }}
     header.info-sidebar {{ partial "info-sidebar" . }}
