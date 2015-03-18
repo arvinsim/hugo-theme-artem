@@ -4,10 +4,10 @@ meta property="og:title" content="{{ .Title }}"
 meta property="og:url" content="{{ .Permalink }}"
 {{ if .IsPage }}
 meta property="og:type" content="article"
-meta property="og:image content="http://i.imgur.com/ln01b2Nm.png"
+meta property="og:image" content="http://i.imgur.com/ln01b2Nm.png"
 {{ else }}
 meta property="og:type" content="website"
-meta property="og:image content="http://i.imgur.com/ln01b2Nm.png"
+meta property="og:image" content="http://i.imgur.com/ln01b2Nm.png"
 {{ end }}
 title {{ .Title }} &middot; {{ .Site.Title }}
 link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
