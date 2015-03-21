@@ -1,5 +1,5 @@
 article.post-item itemscope= itemtype="https://schema.org/BlogPosting"
-  div.header
+  div.header 
     span.date itemprop="datePublished" {{ .Date.Format "January 2, 2006" }}
     h1.title itemprop="name" {{.Title}}
     {{ range .Params.tags }}

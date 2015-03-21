@@ -31,6 +31,7 @@ html, button, input, select, textarea {
 
 body {
     @include container(55em); 
+    background: url('../images/subtle_white_feathers.png') repeat scroll 0% 0% white;
     color: map-get($colors, primary);
     padding-top: 6em;
 }
