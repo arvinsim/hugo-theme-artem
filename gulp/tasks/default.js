@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+var gulp = require("gulp");
 
-gulp.task('default', ['sass']);
-gulp.task('dev', ['sass']);
+gulp.task("default", ["sass", "images"]);
+gulp.task("dev", ["sass", "images"]);

@@ -20,7 +20,8 @@
     "susy": "~2.2.2",
     "gulp-autoprefixer": "~2.1.0",
     "require-dir": "~0.1.0",
-    "modularized-normalize-scss": "~3.0.2"
+    "modularized-normalize-scss": "~3.0.2",
+    "gulp-image": "~0.5.7"
   },
   "dependencies": {}
 }
